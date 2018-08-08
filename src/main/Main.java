@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		int gold = 0, gems = 0, gearHaul = 0, geartable = 0; 
 		
-		int items[] = new int[20]; 
+		int items[] = new int[0]; 
 		
 		Scanner k = new Scanner(System.in);
 		
@@ -30,6 +30,8 @@ public class Main {
 			gold = r.LowGoldRewards(rand);
 			gearHaul = rand.nextInt(4) + 1;
 			geartable = rand.nextInt(3) + 1;
+			
+			items = new int[gearHaul + 1]; 
 			for(int i = 0; i < gearHaul; i++) {
 				items[i] = r.GearRewards(rand); 
 			}
@@ -41,6 +43,7 @@ public class Main {
 			gold = r.MediumGoldRewards(rand);
 			gearHaul = rand.nextInt(6) + 1;
 			geartable = rand.nextInt(3) + 3;
+			items = new int[gearHaul + 1]; 
 			for(int i = 0; i < gearHaul; i++) {
 				items[i] = r.GearRewards(rand); 
 			}
@@ -51,6 +54,7 @@ public class Main {
 			gold = r.HighGoldRewards(rand);
 			gearHaul = rand.nextInt(10) + 1;
 			geartable = rand.nextInt(3) + 6;
+			items = new int[gearHaul + 1]; 
 			for(int i = 0; i < gearHaul; i++) {
 				items[i] = r.GearRewards(rand); 
 			}
@@ -59,8 +63,9 @@ public class Main {
 		//legendary teir challenge 
 		else if(challenge == 10) {
 			gold = r.LegendaryGoldRewards(rand); 
-			gearHaul = rand.nextInt(7) + 1;
+			gearHaul = rand.nextInt(7) + 3;
 			geartable = 9;
+			items = new int[gearHaul + 1]; 
 			for(int i = 0; i < gearHaul; i++) {
 				items[i] = r.GearRewards(rand); 
 			}

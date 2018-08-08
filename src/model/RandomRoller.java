@@ -11,26 +11,41 @@ public class RandomRoller {
 	}
 	
 	//gem rewards
+	public int LowGemRewards(Random r) {
+		return 0; 
+	}
+	
+	public int MedGemRewards(Random r) {
+		return 0; 
+	}
+	
+	public int HighGemRewards(Random r) {
+		return 0; 
+	}
+	
+	public int LegendaryGemRewards(Random r) {
+		return 0; 
+	}
 	
 	
 	//gold rewards section
 	public int LowGoldRewards(Random r) {
-		return r.nextInt(1000) + 100;
+		return r.nextInt(1000) + 200;
 		
 	}
 	
 	public int MediumGoldRewards(Random r) {
-		return r.nextInt(10000) + 1000;
+		return r.nextInt(10000) + 2000;
 		
 	}
 	
 	public int HighGoldRewards(Random r) {
-		return r.nextInt(100000) + 10000;
+		return r.nextInt(100000) + 20000;
 		
 	}
 	 
 	public int LegendaryGoldRewards(Random r) {
-		return r.nextInt(1000000) + 100000;
+		return r.nextInt(1000000) + 200000;
 		
 	}
 	
